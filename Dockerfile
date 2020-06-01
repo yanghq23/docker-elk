@@ -95,8 +95,6 @@ RUN mkdir ${KIBANA_HOME} \
  && mkdir -p /var/log/kibana \
  && chown -R kibana:kibana ${KIBANA_HOME} /var/log/kibana
 
-COPY kibana.yml /opt/kibana/config/kibana.yml
-
 ###############################################################################
 #                              START-UP SCRIPTS
 ###############################################################################

@@ -18,8 +18,8 @@ ENV \
 ###############################################################################
 
 ### install prerequisites (cURL, gosu, JDK, tzdata)
-RUN  sed -i s@/archive.ubuntu.com/@/mirrors.aliyun.com/@g /etc/apt/sources.list
-RUN  apt clean
+# RUN  sed -i s@/archive.ubuntu.com/@/mirrors.aliyun.com/@g /etc/apt/sources.list
+# RUN  apt clean
 
 RUN set -x \
  && apt update -qq \

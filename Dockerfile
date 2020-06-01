@@ -8,9 +8,9 @@
 # docker run -p 5601:5601 -p 9200:9200 -p 5044:5044 -it --name elk <repo-user>/elk
 
 FROM phusion/baseimage:0.11
-MAINTAINER Sebastien Pujadas http://pujadas.net
+MAINTAINER yanghq
 ENV \
- REFRESHED_AT=2017-02-28
+ REFRESHED_AT=2020-06-01
 
 
 ###############################################################################
@@ -18,6 +18,8 @@ ENV \
 ###############################################################################
 
 ### install prerequisites (cURL, gosu, JDK, tzdata)
+RUN  sed -i s@/archive.ubuntu.com/@/mirrors.aliyun.com/@g /etc/apt/sources.list
+RUN  apt clean
 
 RUN set -x \
  && apt update -qq \

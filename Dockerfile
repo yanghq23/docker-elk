@@ -40,7 +40,7 @@ ENV \
 # note you can't define an env var that references another one in the same block (docker layer)
 ENV \
  JAVA_HOME=/usr/lib/jvm/java-8-openjdk-amd64/jre \
- ES_PACKAGE=elasticsearch-${ES_VERSION}-linux-x86_64.tar.gz \
+ ES_PACKAGE=elasticsearch-${ES_VERSION}.tar.gz \
  ES_GID=991 \
  ES_UID=991 \
  ES_PATH_CONF=/etc/elasticsearch \
@@ -82,7 +82,7 @@ RUN mkdir ${LOGSTASH_HOME} \
 
 ENV \
  KIBANA_HOME=/opt/kibana \
- KIBANA_PACKAGE=kibana-${KIBANA_VERSION}-linux-x86_64.tar.gz \
+ KIBANA_PACKAGE=kibana-${KIBANA_VERSION}.tar.gz \
  KIBANA_GID=993 \
  KIBANA_UID=993
 

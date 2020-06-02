@@ -82,7 +82,7 @@ RUN mkdir ${LOGSTASH_HOME} \
 
 ENV \
  KIBANA_HOME=/opt/kibana \
- KIBANA_PACKAGE=kibana-${KIBANA_VERSION}.tar.gz \
+ KIBANA_PACKAGE=kibana-${KIBANA_VERSION}-linux-x86_64.tar.gz \
  KIBANA_GID=993 \
  KIBANA_UID=993
 

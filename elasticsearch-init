@@ -40,7 +40,8 @@ ES_GROUP=elasticsearch
 ES_HOME=
 
 # Directory containing JRE
-JAVA_HOME=/usr/lib/jvm/java-8-openjdk-amd64/jre
+#JAVA_HOME=/usr/lib/jvm/java-8-openjdk-amd64/jre
+JAVA_HOME=$ES_HOME/jdk
 
 # Additional Java OPTS
 #ES_JAVA_OPTS=
@@ -90,9 +91,8 @@ if [ ! -x "$DAEMON" ]; then
 fi
 
 checkJava() {
-    if [ -x "$JAVA_HOME/bin/java" ]; then
-        #JAVA="$JAVA_HOME/bin/java"
-        JAVA="$DAEMON/jdk/bin/java"
+    if [ -x "$JAVA_HOME/bin" ]; then
+        JAVA="$ES_HOME/jdk/bin/java"
         echo "Could find $JAVA"
     else
         JAVA=`which java`

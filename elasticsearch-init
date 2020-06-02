@@ -92,7 +92,7 @@ fi
 
 checkJava() {
     if [ -x "$JAVA_HOME/bin" ]; then
-        JAVA="$ES_HOME/jdk/bin/java"
+        JAVA="/opt/elasticsearch/jdk/bin/java"
         echo "Could find $JAVA"
     else
         JAVA=`which java`

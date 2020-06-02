@@ -91,7 +91,8 @@ fi
 
 checkJava() {
     if [ -x "$JAVA_HOME/bin/java" ]; then
-        JAVA="$JAVA_HOME/bin/java"
+        #JAVA="$JAVA_HOME/bin/java"
+        JAVA="$DAEMON/jdk/bin/java"
         echo "Could find $JAVA"
     else
         JAVA=`which java`

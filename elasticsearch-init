@@ -92,8 +92,10 @@ fi
 checkJava() {
     if [ -x "$JAVA_HOME/bin/java" ]; then
         JAVA="$JAVA_HOME/bin/java"
+        echo "Could find $JAVA"
     else
         JAVA=`which java`
+        echo "Could not find $JAVA"
     fi
 
     if [ ! -x "$JAVA" ]; then
